@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sreejith | Data Scientist & Data Analyst</title>
+    <!-- Google Fonts for crisp typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#050505] text-white antialiased selection:bg-red-500 selection:text-white min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      window.PORTFOLIO_AI_API = "https://ai.sreestats.in/api/chat";
+    </script>
+
+    <link rel="stylesheet" href="/chatbot/widget.css">
+
+    <button id="chat-toggle" class="chat-toggle" aria-label="Open Sreejith's AI assistant">AI</button>
+    <section id="chat-widget" class="chat-widget hidden" aria-label="Sreejith portfolio AI assistant">
+      <header class="chat-header">
+        <div>
+          <strong>Sreejith AI</strong>
+          <small>Portfolio Assistant</small>
+        </div>
+        <button id="chat-close" aria-label="Close assistant">×</button>
+      </header>
+      <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
+      <div class="quick-actions" id="quick-actions">
+        <button type="button" data-question="Tell me about Sreejith">About me</button>
+        <button type="button" data-question="What projects are in this portfolio?">Projects</button>
+        <button type="button" data-question="What services does Sreejith offer?">Services</button>
+        <button type="button" data-question="How can I contact Sreejith?">Contact</button>
+      </div>
+      <form id="chat-form" class="chat-form">
+        <input id="chat-input" maxlength="4000" placeholder="Ask about my portfolio…" autocomplete="off" required>
+        <button type="submit" aria-label="Send message">Send</button>
+      </form>
+    </section>
+    <script src="/chatbot/widget.js"></script>
+  </body>
+</html>

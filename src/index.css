@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #050505;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .text-outline-red {
+    -webkit-text-stroke: 1.5px #ff2a2a;
+    color: transparent;
+  }
+  
+  .text-outline-red-thick {
+    -webkit-text-stroke: 2px #ff2a2a;
+    color: transparent;
+  }
+  
+  .glow-red {
+    box-shadow: 0 0 25px rgba(255, 42, 42, 0.25);
+  }
+  
+  .glass-card {
+    background: rgba(18, 18, 18, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .glass-card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .glass-card-hover:hover {
+    border-color: rgba(255, 42, 42, 0.4);
+    box-shadow: 0 10px 30px -10px rgba(255, 42, 42, 0.15);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff2a2a;
+}
+/* Reference-style animated pink/violet card glow.
+   The effect does not move or resize the card, so grid alignment stays fixed. */
+.card-glow {
+  position: relative;
+  transition:
+    border-color 320ms ease,
+    box-shadow 320ms ease;
+}
+
+.card-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  padding: 1.5px;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    105deg,
+    #ff7a72,
+    #ff4fa3,
+    #d946ef,
+    #8b5cf6,
+    #ff7a72
+  );
+  background-size: 300% 300%;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  transition: opacity 320ms ease;
+}
+
+.card-glow:hover {
+  border-color: transparent;
+  box-shadow:
+    -8px -3px 18px rgba(255, 105, 115, 0.38),
+    8px 4px 22px rgba(168, 85, 247, 0.48),
+    0 0 16px rgba(236, 72, 153, 0.28);
+}
+
+.card-glow:hover::before {
+  opacity: 1;
+  animation: card-glow-flow 1.8s linear infinite;
+}
+
+@keyframes card-glow-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-glow:hover::before {
+    animation: none;
+  }
+}
