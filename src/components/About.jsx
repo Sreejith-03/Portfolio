@@ -37,10 +37,10 @@ const About = () => {
 
   return (
     <section id="about" className="relative min-h-screen py-20 bg-[#050505] flex items-center overflow-hidden">
-      <div className="max-w-7xl w-full mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         {/* Left Side: Photo & Outline "ABOUT" Text */}
-        <div className="lg:col-span-5 relative flex flex-col justify-center min-h-[500px]">
+        <div className="lg:col-span-5 relative flex flex-col justify-center min-h-[360px] sm:min-h-[440px] lg:min-h-[500px]">
           {/* Badge */}
           <div className="inline-block self-start mb-4 border border-white/20 bg-black/40 px-3 py-1 text-[10px] tracking-widest font-mono text-gray-300 uppercase">
             ABOUT ME
@@ -48,7 +48,7 @@ const About = () => {
 
           {/* Background Outlined Text "ABOUT" */}
           <div className="absolute top-8 left-0 select-none z-0 pointer-events-none">
-            <h2 className="text-[12rem] font-black text-outline-red tracking-tighter leading-none opacity-80 uppercase font-display">
+            <h2 className="text-[7rem] sm:text-[9rem] lg:text-[12rem] font-black text-outline-red tracking-tighter leading-none opacity-80 uppercase font-display">
               ABOUT
             </h2>
           </div>

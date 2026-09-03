@@ -12,20 +12,45 @@ const Hero = () => {
   return (
     <section 
     id="home"
-    className="relative min-h-screen pt-32 md:pt-24 pb-10 md:pb-12 flex flex-col justify-between overflow-hidden bg-[#050505]"
+    className="relative min-h-screen pt-28 sm:pt-32 md:pt-24 pb-8 md:pb-12 flex flex-col justify-between overflow-hidden bg-[#050505]"
     >
       {/* Background Big Typography: SREEJITH */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden z-0">
-        <h1 className="text-[30vw] leading-none font-black text-[#FF2A2A] tracking-tighter uppercase font-display opacity-90 scale-y-125">
+        <h1 className="text-[38vw] sm:text-[34vw] md:text-[30vw] leading-none font-black text-[#FF2A2A] tracking-tighter uppercase font-display opacity-90 md:scale-y-125">
           SREEJITH
         </h1>
       </div>
 
       {/* Main Content Area with Person Cutout */}
-      <div className="relative z-10 max-w-7xl w-full mx-auto px-6 flex-1 flex flex-col justify-end">
+      <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 flex-1 flex flex-col justify-end">
         
         {/* Center Portrait Image */}
-        <div className="absolute left-1/2 bottom-0 -translate-x-1/2 h-[75vh] md:h-[82vh] max-h-[750px] pointer-events-none z-10 flex items-end">
+        <div className="
+    absolute
+    left-1/2
+    -translate-x-1/2
+    bottom-[20px]
+
+    w-[300px]
+    h-[410px]
+
+    sm:w-[360px]
+    sm:h-[500px]
+
+    md:w-auto
+    md:h-[72vh]
+
+    lg:h-[82vh]
+
+    max-h-[750px]
+
+    pointer-events-none
+    z-10
+
+    flex
+    items-end
+    justify-center
+  ">
           <img 
             src="/assets/1.png" 
             alt="Sreejith Portrait" 
@@ -40,7 +65,7 @@ const Hero = () => {
         </div>
 
         {/* Bottom Content Row */}
-        <div className="relative z-20 flex flex-col md:flex-row items-start md:items-end justify-between pb-6 gap-8">
+        <div className="relative z-20 flex flex-col md:flex-row items-start md:items-end justify-between pb-4 sm:pb-6 gap-5 md:gap-8">
           
           {/* Left Text & CTAs */}
           <div className="max-w-md space-y-4">
@@ -48,7 +73,7 @@ const Hero = () => {
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-100">
                 Data Scientist
               </h2>
-              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-gray-100">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight text-gray-100">
                 Data Analyst
               </h2>
             </div>
@@ -57,10 +82,10 @@ const Hero = () => {
               Turning Data Into Actionable Insights
             </p>
 
-            <div className="flex items-center space-x-3 pt-2">
+            <div className="flex flex-wrap items-center gap-3 pt-2">
               <button
               onClick={() => scrollTo('projects')}
-              className="group relative overflow-hidden px-6 py-2.5 bg-transparent
+              className="group relative overflow-hidden px-4 sm:px-6 py-2.5 bg-transparent
                         border border-white/40 text-white font-medium text-sm rounded-md
                         transition-all duration-300 ease-out
                         hover:border-[#FF2A2A] hover:-translate-y-1
@@ -105,7 +130,7 @@ const Hero = () => {
           </div>
 
           {/* Right Social Icons Stack */}
-          <div className="flex flex-row md:flex-col items-center space-x-3 md:space-x-0 md:space-y-3 z-30">
+          <div className="flex flex-row md:flex-col items-center gap-3 z-30">
             <a 
               href="https://linkedin.com" 
               target="_blank" 

@@ -4,7 +4,7 @@ import { Code2, Brain, BarChart3, CheckCircle2 } from 'lucide-react';
 const Skills = () => {
   return (
     <section id="skills" className="relative min-h-screen py-20 bg-[#050505] flex flex-col justify-center">
-      <div className="max-w-7xl w-full mx-auto px-6 space-y-12">
+      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 space-y-12">
         
         {/* Section Heading */}
         <div className="text-center space-y-2">
@@ -19,7 +19,7 @@ const Skills = () => {
           
           {/* Left Column: Image Card */}
           <div className="lg:col-span-5 flex items-center">
-            <div className="w-full h-full min-h-[420px] rounded-2xl overflow-hidden border border-white/10 relative group">
+            <div className="w-full h-[300px] sm:h-[380px] lg:h-full lg:min-h-[420px] rounded-2xl overflow-hidden border border-white/10 relative group">
               <img 
                 src="/assets/skills-person.png" 
                 alt="Skills Visor Portrait" 
