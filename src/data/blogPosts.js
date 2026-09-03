@@ -45,21 +45,6 @@ const blogPosts = [
       "Retrieval-augmented generation helps the assistant answer from trusted website content instead of depending only on its pre-trained knowledge.",
       "The most important lesson was to build in stages: prepare the knowledge base, test retrieval, connect the model and finally improve the interface."
     ]
-  },
-  {
-    id: "building-my-first-ai-chatbot",
-    title: "Building My First AI Chatbot",
-    excerpt:
-      "Key lessons from developing a context-aware chatbot using Python, FastAPI, Llama and RAG.",
-    image: "/assets/blog/blog3.png",
-    date: "2026-08-23",
-    readTime: "6 min read",
-    category: "Artificial Intelligence",
-    content: [
-      "An effective website chatbot needs more than a language model. It also needs reliable context, clear instructions and a fast user experience.",
-      "Retrieval-augmented generation helps the assistant answer from trusted website content instead of depending only on its pre-trained knowledge.",
-      "The most important lesson was to build in stages: prepare the knowledge base, test retrieval, connect the model and finally improve the interface."
-    ]
   }
 ];
 
